@@ -25,6 +25,9 @@ class MainWindow(QMainWindow):
         self.pdf_viewer = PDFViewer()
         self.setCentralWidget(self.pdf_viewer)
 
+        self.pdf_viewer.zoom_in_requested.connect(self.zoom_in)
+        self.pdf_viewer.zoom_out_requested.connect(self.zoom_out)
+
         self.create_menu_bar()
 
     def create_menu_bar(self):
