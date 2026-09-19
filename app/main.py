@@ -1,15 +1,14 @@
 import sys
 
-from PySide6.QtWidgets import QApplication, QMainWindow
+from PySide6.QtWidgets import QApplication
+
+from app.gui.main_window import MainWindow
 
 
 def main():
     app = QApplication(sys.argv)
 
-    window = QMainWindow()
-    window.setWindowTitle("PDF Editor")
-    window.resize(1400, 900)
-    window.setMinimumSize(800, 600)
+    window = MainWindow()
     window.show()
 
     sys.exit(app.exec())
